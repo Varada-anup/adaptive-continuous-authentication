@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Continuous Authentication</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+
+body{
+  font-family:'Segoe UI',sans-serif;
+  background:linear-gradient(135deg,#667eea,#764ba2);
+  min-height:100vh;
+  padding:24px 16px;
+}
+
+.wrapper{
+  max-width:860px;
+  margin:auto;
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+
+.topbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:rgba(255,255,255,0.12);
+  border-radius:14px;
+  padding:14px 20px;
+  color:white;
+  backdrop-filter:blur(8px);
+}
+
+.topbar a{
+  color:white;
+  text-decoration:none;
+  border:1px solid rgba(255,255,255,0.4);
+  padding:5px 14px;
+  border-radius:20px;
+}
+
+.status-bar{
+  background:rgba(255,255,255,0.12);
+  border-radius:14px;
+  padding:14px 20px;
+  backdrop-filter:blur(8px);
+  color:white;
+  display:flex;
+  align-items:center;
+  gap:16px;
+}
+
+.status-text{
+  padding:6px 14px;
+  border-radius:20px;
+  font-size:.9rem;
+}
+
+.learning{background:rgba(255,180,0,.25)}
+.genuine{background:rgba(0,220,100,.25)}
+.intruder{background:rgba(255,50,50,.35)}
+.idle{background:rgba(255,255,255,.15)}
+
+.card{
+  background:white;
+  border-radius:18px;
+  padding:28px 30px;
+  box-shadow:0 8px 32px rgba(0,0,0,.18);
+}
+
+h2{margin-bottom:8px}
+
+.hint{
+  font-size:.8rem;
+  color:#666;
+  margin-bottom:10px;
+}
+
+.input-row{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-bottom:16px;
+}
+
+.inputBox{
+  flex:1;
+  min-width:180px;
+  padding:10px 12px;
+  border-radius:8px;
+  border:2px solid #e0e0e0;
+}
+.inputBox:focus{border-color:#764ba2;outline:none}
+
+.aboutBox{
+  width:100%;
+  min-height:120px;
+  padding:12px;
+  border-radius:10px;
+  border:2px solid #e0e0e0;
+  margin-bottom:18px;
+}
+.aboutBox:focus{border-color:#764ba2;outline:none}
+
+.passage{
+  background:#f7f8fc;
+  border-left:4px solid #764ba2;
+  padding:16px;
+  margin-bottom:18px;
+}
+
+#inputBox{
+  width:100%;
+  min-height:160px;
+  padding:14px;
+  border-radius:10px;
+  border:2px solid #e0e0e0;
+}
+
+.stats-row{
+  display:flex;
+  gap:12px;
+  margin-top:16px;
+}
+.stat-box{
+  flex:1;
+  background:#f4f5fb;
+  padding:12px;
+  text-align:center;
+}
+
+#overlay{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(180,0,0,.82);
+  color:white;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+}
+#overlay.show{display:flex}
+</style>
+
+</head>
+
+<body>
+
+<div class="wrapper">
+
+<div class="topbar">
+  <h1>🛡️ Continuous Authentication</h1>
+  <a href="/logout">Logout</a>
+</div>
+
+<div class="status-bar">
+  <span id="statusText" class="status-text idle">Waiting...</span>
+</div>
+
+<div class="card">
+
+<h2>Student Details</h2>
+<div class="input-row">
+  <input class="inputBox" placeholder="Full Name">
+  <input class="inputBox" placeholder="Register Number">
+  <input class="inputBox" placeholder="Department">
+</div>
+
+<h2>Tell About Yourself</h2>
+<textarea class="aboutBox" placeholder="Write about yourself..."></textarea>
+
+<h2>Type the passage below</h2>
+
+<div class="passage">
+Continuous authentication systems enhance security by continuously verifying the identity of a
+      user throughout an active session. Unlike traditional authentication methods that rely only on
+      passwords or one-time verification, continuous authentication ensures that the person using the
+      system remains the same from login to logout. This is achieved by analysing behavioural biometrics
+      such as typing patterns, keystroke dynamics, and mouse movements. Each individual has a unique way
+      of interacting with a computer, including how long they press keys, the time between key presses,
+      typing speed, and the rhythm of their input. Similarly, mouse behaviour such as movement speed,
+      direction changes, and activity levels also contribute to identifying a user.</div>
+
+<textarea id="inputBox" placeholder="Start typing here..."></textarea>
+
+<div class="stats-row">
+  <div class="stat-box"><div id="statKeys">0</div><div>Keys</div></div>
+  <div class="stat-box"><div id="statMouse">0</div><div>Mouse</div></div>
+  <div class="stat-box"><div id="statSent">0</div><div>Batches</div></div>
+</div>
+
+</div>
+</div>
+
+<div id="overlay">
+<h2>Intruder Detected</h2>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+const keyDownTimes={}
+let keystrokes=[]
+let mouseMoves=[]
+let captureActive=true
+
+function setStatus(state,text){
+  const el=document.getElementById("statusText")
+  el.className="status-text "+state
+  el.textContent=text
+}
+
+document.addEventListener("keydown",e=>{
+  if(!keyDownTimes[e.key]) keyDownTimes[e.key]=Date.now()
+})
+
+document.addEventListener("keyup",e=>{
+  if(keyDownTimes[e.key]){
+    keystrokes.push({key:e.key,down:keyDownTimes[e.key],up:Date.now()})
+    delete keyDownTimes[e.key]
+  }
+})
+
+document.addEventListener("mousemove",e=>{
+  mouseMoves.push({x:e.clientX,y:e.clientY,time:Date.now()})
+})
+
+function showIntruder(){
+  document.getElementById("overlay").classList.add("show")
+  setTimeout(()=>{ window.location="/login" },1500)
+}
+
+setInterval(()=>{
+
+  if(!captureActive) return
+  if(keystrokes.length<6) return
+
+  const payload={keys:keystrokes,mouse:mouseMoves}
+  keystrokes=[]
+  mouseMoves=[]
+
+  fetch("/capture",{
+    method:"POST",
+    headers:{"Content-Type":"application/json"},
+    body:JSON.stringify(payload)
+  })
+  .then(r=>r.json())
+  .then(data=>{
+
+    if(data.status==="learning"){
+      setStatus("learning","📚 Learning...")
+      return
+    }
+
+    if(data.decision==="confirmed_intruder"){
+      setStatus("intruder","🚨 Intruder Confirmed")
+      captureActive=false
+      showIntruder()
+      return
+    }
+
+    if(data.status==="intruder"){
+      setStatus("intruder","🚨 Intruder Confirmed")
+      captureActive=false
+      showIntruder()
+      return
+    }
+
+    if(data.decision==="intruder" || data.decision==="suspicious"){
+      setStatus("intruder","⚠️ Suspicious Behaviour")
+      return
+    }
+
+    if(data.decision==="genuine"){
+      setStatus("genuine","✅ Genuine User")
+      return
+    }
+
+  })
+
+},1500)
+
+})
+</script>
+
+</body>
+</html>

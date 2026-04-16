@@ -1,0 +1,281 @@
+Alright — this is the **most important part for your viva**. I’ll explain it clearly, step-by-step, exactly how your system works internally.
+
+---
+
+# 🧠 🔐 OVERALL IDEA
+
+Your system is:
+
+> **Continuous Authentication using Behavioural Biometrics**
+
+👉 Instead of checking user only at login,
+👉 it **continuously verifies identity** using behaviour.
+
+---
+
+# ⚙️ FULL INTRUSION DETECTION FLOW
+
+---
+
+# 1️⃣ DATA COLLECTION (FRONTEND)
+
+On **details + interaction pages**:
+
+* ⌨️ Keystrokes captured
+
+  ```json
+  { key: "a", time: 123456 }
+  ```
+* 🖱️ Mouse movements captured
+
+  ```json
+  { x: 200, y: 150, time: 123456 }
+  ```
+
+👉 Sent every few seconds to backend:
+
+```plaintext
+/capture API
+```
+
+---
+
+# 2️⃣ FEATURE EXTRACTION
+
+Inside `feature_extractor.py`
+
+We convert raw data → meaningful behaviour:
+
+### ⌨️ Typing features:
+
+* **key_mean** → average typing speed
+* **key_std** → variation in typing
+* **digraph timing** → time between key pairs (like "th", "he")
+
+👉 This captures **typing rhythm**
+
+---
+
+### 🖱️ Mouse features:
+
+* movement speed
+* direction consistency
+
+---
+
+👉 Final feature vector:
+
+```plaintext
+{
+  key_mean,
+  key_std,
+  mouse_mean,
+  digraph patterns
+}
+```
+
+---
+
+# 3️⃣ LEARNING PHASE
+
+```plaintext
+First 12 samples → learning
+```
+
+👉 System builds **user profile**
+
+Profile = average behaviour:
+
+```plaintext
+profile = average(features)
+```
+
+👉 This becomes:
+
+> 🧠 “normal behaviour of the user”
+
+---
+
+# 4️⃣ CONTINUOUS MONITORING
+
+After learning:
+
+Every new input:
+
+```plaintext
+current behaviour → extracted
+```
+
+System compares:
+
+```plaintext
+profile vs current
+```
+
+---
+
+# 5️⃣ SIMILARITY CALCULATION
+
+We compute:
+
+```plaintext
+difference = how far current is from profile
+```
+
+Includes:
+
+* typing speed difference
+* typing variation
+* mouse behaviour
+* digraph timing
+
+---
+
+Then:
+
+```plaintext
+score = 1 - difference
+```
+
+👉 So:
+
+* score ≈ 1 → very similar ✅
+* score ≈ 0 → very different ❌
+
+---
+
+# 6️⃣ ADAPTIVE THRESHOLD
+
+Instead of fixed value:
+
+```plaintext
+threshold = average(user behaviour) - margin
+```
+
+👉 Each user gets:
+
+> 🎯 personalised threshold
+
+---
+
+# 7️⃣ DECISION LOGIC
+
+Final check:
+
+```plaintext
+if score >= (threshold - tolerance):
+    genuine
+else:
+    intruder
+```
+
+👉 Tolerance avoids false alarms
+
+---
+
+# 8️⃣ 3-STRIKE INTRUSION CONTROL
+
+Very important 🔥
+
+Instead of instant logout:
+
+```plaintext
+Intruder → count = 1
+Intruder → count = 2
+Intruder → count = 3 → LOGOUT
+```
+
+👉 Why?
+
+* prevents false positives
+* increases reliability
+
+---
+
+# 9️⃣ COOLDOWN MECHANISM
+
+Even after detection:
+
+```plaintext
+alert sent only after cooldown time
+```
+
+👉 Prevents:
+
+* spam alerts
+* repeated triggers
+
+---
+
+# 🔁 COMPLETE FLOW SUMMARY
+
+```plaintext
+User logs in
+    ↓
+System collects behaviour (typing + mouse)
+    ↓
+Feature extraction
+    ↓
+Learning phase (build profile)
+    ↓
+Continuous monitoring
+    ↓
+Similarity score calculated
+    ↓
+Compare with adaptive threshold
+    ↓
+If abnormal → intruder count++
+    ↓
+If 3 consecutive → logout + alert
+```
+
+---
+
+# 🎯 WHY THIS WORKS
+
+Because:
+
+✔ Every person has unique typing rhythm
+✔ Mouse movement is hard to mimic
+✔ Behaviour changes when intruder takes over
+
+---
+
+# 🔥 WHAT MAKES YOUR PROJECT STRONG
+
+You didn’t build basic auth — you built:
+
+✔ Continuous authentication
+✔ Behaviour-based detection
+✔ Adaptive threshold
+✔ Digraph keystroke analysis
+✔ Multi-page monitoring
+✔ 3-stage intrusion confirmation
+
+👉 This is **advanced level**
+
+---
+
+# 🎤 VIVA READY ANSWER (SHORT)
+
+If they ask:
+
+**“How does intrusion detection work?”**
+
+Say:
+
+> “The system continuously collects behavioural data such as keystroke dynamics and mouse movement, extracts features, and compares them with a learned user profile using a similarity score. An adaptive threshold determines whether behaviour is normal or anomalous. To reduce false positives, intrusion is confirmed only after three consecutive anomalies before logging out the user.”
+
+---
+
+# 👉 IF YOU WANT NEXT
+
+I can help you with:
+
+* 🎤 Full viva questions + answers
+* 📊 Architecture diagram
+* 📧 Email alert system
+
+---
+
+Just tell me 👍
