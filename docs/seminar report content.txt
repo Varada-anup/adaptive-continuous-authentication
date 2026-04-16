@@ -1,0 +1,554 @@
+%%%%%%%%%%%%%%%%%%%% ACKNOWLEDGEMENT %%%%%%%%%%%%%%%%%%%%
+\begin{titlepage}
+\begin{center}
+\Large{\textbf{Acknowledgements}}\\[1cm]
+\end{center}
+\normalsize 
+This seminar is the result of my hard work wherein I have been helped and supported by several persons and institutions directly and indirectly. Now it is the time to acknowledge their contributions.\par
+Foremost, I would like to express my sincere gratitude to my seminar guide, \textbf{Asst. Prof. Jiss Kuruvilla} for his/her continuous encouragement, invaluable guidance, motivation and enthusiasm throughout my seminar. \par
+My sincere gratitude to \textbf{Dr. Saritha K}, Head of Department during my course period 2024-2026. I would also like to thank the seminar coordinator(s) \textbf{Sivadas T Nair} and \textbf{Dr. Geethu S} for critically assessing my work and giving valuable suggestions. I would like to acknowledge management of Muthoot Institute of Technology \& Science for providing academic support to complete my seminar.\par
+In my daily work I have been blessed with a friendly and cheerful group of fellow students. I am very much thankful to all the members of S4 MCA.\par
+Besides this, several people have knowingly and unknowingly helped me in the successful completion of this seminar. I express my sincere gratitude to all of them.
+
+\begin{flushright}
+Varada Anup
+\end{flushright}
+\end{titlepage}
+
+%%%%%%%%%%%%%%%%%%%% ABSTRACT %%%%%%%%%%%%%%%%%%%%%%%
+\begin{titlepage}
+\begin{center}
+\textsc{\textbf{\LARGE Abstract}}\\[1cm]
+\end{center}
+\pagenumbering{roman}
+Artificial intelligence's quick development has drastically changed the nature of cybercrime by giving attackers the ability to carry out extremely complex, scalable, and convincing attacks. Conventional cybercrime strategies mostly depended on taking advantage of technical flaws and simple social engineering tactics. But as artificial intelligence has been incorporated into cybercrime, the emphasis has switched to taking advantage of human perception, trust, and behavioral patterns. The advent of AI-powered cybercrimes is examined in this seminar, with a focus on voice cloning assaults, deepfake technology, and AI-generated phishing. 
+
+Deepfake technology uses Generative Adversarial Networks to produce extremely lifelike synthetic videos that can mimic real people. These attacks compromise the validity of visual verification systems and have been used for advanced social engineering, financial fraud, identity theft, and disinformation operations. Voice cloning attacks use minimal audio samples and deep learning-based text-to-speech models to mimic human voices, allowing for convincing imitation of executives, family members, and authority officials. When compared to conventional phishing approaches, automated phishing attacks driven by big language models provide context-aware, grammatically correct, and personalized communications at scale, greatly enhancing success rates. 
+
+The lecture examines actual events that show the seriousness and practical effects of these AI-driven risks, emphasizing significant monetary losses, business interruptions, and a decline in confidence in digital communication systems. The difficulties in identifying AI-powered attacks are also covered, such as the limitations of human vision and the continuous arms race between attack generating methods and detection systems.
+
+Additionally, the conference offers multi-layered defense strategies that include individual awareness campaigns, organizational security procedures, and technology detection techniques. Multi-factor authentication, verification and callback procedures, cybersecurity awareness training, and critical assessment of urgent or high-risk requests are all emphasized. In addition to new risks like real-time deepfake attacks and AI-as-a-service cybercrime platforms, the legal and regulatory issues surrounding the misuse of AI are briefly discussed. 
+
+This webinar emphasizes the critical need for adaptive, continuous, and human-aware security methods to safeguard digital ecosystems in the age of artificial intelligence by offering a thorough overview of AI-powered cybercrime risks and mitigation techniques. 
+\end{titlepage}
+
+%%%%%%%%%%%%%%%%%%%% TOC, LISTS %%%%%%%%%%%%%%%%%%%%
+\tableofcontents
+\cleardoublepage
+\addcontentsline{toc}{chapter}{\listfigurename}
+\cleardoublepage
+\addcontentsline{toc}{chapter}{\listtablename}
+\cleardoublepage
+
+%%%%%%%%%%%%%%%%%%%% LIST OF ABBREVIATIONS %%%%%%%%%%%%%%%%%%%%
+\chapter*{List of Abbreviations}
+\addcontentsline{toc}{chapter}{List of Abbreviations}
+
+\begin{tabbing}
+xxxxxxxxxxxxxxxx \= xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx \kill
+\textbf{AI} \> Artificial Intelligence \\
+\textbf{GAN} \> Generative Adversarial Network \\
+\textbf{LLM} \> Large Language Model \\
+\textbf{BEC} \> Business Email Compromise \\
+\textbf{MFA} \> Multi-Factor Authentication \\
+\textbf{IT Act} \> Information Technology Act \\
+\textbf{GDPR} \> General Data Protection Regulation \\
+\end{tabbing}
+
+\newpage
+\pagenumbering{arabic}
+
+%%%%%%%%%%%%%%%%%%%% MAIN CHAPTERS %%%%%%%%%%%%%%%%%%%%
+\pagenumbering{arabic}
+\chapter{Introduction}
+\section{Overview of Cybercrime in the Artificial Intelligence Era}
+
+Modern society's fast digitalization has greatly increased reliance on internet platforms for personal relationships, financial transactions, communication, and government. Cybercrime has become a constant and changing menace in tandem with these developments. Cybercrime has historically involved taking advantage of technical flaws including malware infestations, unpatched software, weak passwords, and incorrect network configurations. The rise of artificial intelligence has drastically changed the landscape of cybercrime, even though these attack techniques still exist.
+
+Attackers may now automate difficult activities, analyze vast amounts of data, and produce extremely realistic material that closely resembles human behavior thanks to artificial intelligence. This change has led to the development of technically complex and psychologically manipulative cyberattacks. Instead of depending only on system flaws, AI-powered cybercrime increasingly targets human trust, perception, and decision-making.  As a result, even well-secured systems can be compromised when human users are deceived into granting access or authorising actions.
+
+AI-driven cybercrime has a significant financial and societal impact. Successful AI-powered assaults have caused enormous financial losses, protracted operational interruptions, and reputational harm to organizations. People experience emotional distress, financial fraud, identity theft, and a decline in trust in digital communication channels. Cybercrime has grown more scalable, adaptive, and challenging to detect as artificial intelligence develops, requiring a deeper comprehension of new threats and defenses. 
+
+\section{Role of Artificial Intelligence in Changing Attack Strategies}
+
+By facilitating the shift from static and generic attacks to highly customized and adaptable campaigns, artificial intelligence has completely changed cyberattack tactics. Automated reconnaissance is one of the biggest developments brought about by AI. In order to generate comprehensive profiles of possible victims, machine learning algorithms can quickly analyze public records, professional networking sites, social media platforms, and leaked datasets. 
+
+Many of the conventional signs of fraudulent communication have been removed by generative AI models. In the past, phishing attempts were frequently recognized by grammatical mistakes, awkward wording, or generic material. Modern AI-generated texts are nearly identical to authentic correspondence since they are grammatically correct, context-aware, and properly formatted. The efficacy of conventional awareness-based detection techniques is diminished by this change.  The evolution of conventional awareness-based detection techniques is diminished by this change.
+
+The creation of synthetic audiovisual content has also been made possible by artificial intelligence. Deepfakes and voice cloning are examples of technologies that take advantage of people's dependence on aural and visual signals for trust. Reliable authentication is no longer based on hearing a recognizable voice over the phone or seeing a familiar face during a video connection. Additionally, AI-driven systems are capable of real-time adaptation, changing attack behavior in response to user input to produce dynamic and enduring attack situations. 
+
+\section{Major AI-Powered Cybercrime Threats}
+
+This seminar focuses on three critical AI-driven cybercrime threats that pose serious risks to individuals and organisations: deepfake technology, voice cloning attacks, and AI-powered phishing.
+
+Deepfake technology uses advanced machine learning models to generate realistic synthetic videos that impersonate real individuals. These videos can be used to conduct financial fraud, spread misinformation, manipulate public opinion, and execute sophisticated social engineering attacks. The reliability of visual verification mechanisms is significantly undermined by the realism of deepfakes.
+
+Voice cloning attacks utilise deep learning-based text-to-speech systems to replicate a person’s voice using minimal audio samples. This enables attackers to impersonate executives, family members, or authority figures with high accuracy, facilitating fraud and bypassing traditional voice-based authentication systems.
+
+Large language models and automation are combined in AI-powered phishing to produce individualized, contextually relevant, and grammatically perfect false messages on a gigantic scale. These assaults have better success rates than regular phishing because they take advantage of psychological triggers and information unique to each individual.
+
+When taken as a whole, these dangers signify a paradigm shift in cybercrime, highlighting the critical necessity for adaptive security techniques that combine technical solutions with human awareness and verification methods. 
+
+\chapter{Deepfake Technology}\
+
+\section{How Deepfakes Work}
+
+\subsection{Introduction to GANs (Generative Adversarial Networks)}
+
+Generative Adversarial Networks, a class of machine learning frameworks first presented by Ian Goodfellow and associates in 2014, are at the core of deepfake technology. GANs are made up of a discriminator network and a generator network, two neural networks that oppose one another.
+
+A target person's false photos or video frames are produced by the generator network. In the meantime, the discriminator network makes an effort to differentiate between artificial examples generated by the generator and actual examples from the training dataset. 
+
+An adversarial training procedure is used by these two networks. By learning from the discriminator's comments about what makes a picture appear real or false, the generator becomes more adept at producing convincing fakes. Concurrently, by training on a stream of progressively complex synthetic samples, the discriminator enhances its capacity to identify fakes. Until the generator generates outputs that the discriminator can no longer consistently discern from genuine information, this competitive dynamic persists. 
+
+GANs are usually trained on hundreds or thousands of photos and video frames of the target person for deepfake applications. The network gains the ability to recognize unique face features, expressions, lighting, and other elements that contribute to an individual's look. After being trained, the model is able to apply those acquired traits to the original footage, so substituting a different person's face while preserving the natural lighting, movement, and facial expressions. 
+
+\subsection{Face Manipulation and Facial Landmark Detection}
+
+Advanced face modification techniques based on facial landmark identification are needed to create convincing deepfakes. This procedure entails locating and monitoring particular facial anatomical features, such as the corners of the lips, the tips of the nose, the corners of the eyes, and the curves of the jawline. Dozens to hundreds of these crucial sites can be accurately identified by contemporary facial landmark identification algorithms. 
+
+The method of creating deepfakes usually consists of multiple steps. First, facial landmark detection locates important features in both the target face (the person being impersonated) and the source footage (the actual person). Second, the algorithm aligns faces by changing their location, rotation, and scale to match the source and destination. Third, a synthetic face that resembles the target person's appearance is produced by the trained GAN model. Fourth, in order to maintain the original lighting, color balance, and resolution, the synthetic face is blended back into the original video frame. Lastly, temporal smoothing removes flickering and discontinuities by ensuring uniformity across successive video frames. 
+
+In order to ensure that the artificial face exhibits suitable emotional reactions that correspond with the context of the original video, sophisticated deepfake systems also include methods for manipulating facial expressions. This entails analyzing action units—certain combinations of facial muscle movements that correlate to certain expressions—and making sure the artificial face accurately mimics these.
+
+In order to handle difficult situations including profile views, partial occlusions, changing lighting conditions, and various face emotions, modern deepfake algorithms have grown more advanced. Attackers can even make their targets appear to say things they never said by using systems that can provide completely synthetic speech-synchronized lip motions to match an audio file. 
+
+\section{Real-World Case Study: Deepfake Financial Fraud}
+
+\subsection{The Arup Hong Kong Incident (February 2024)}
+
+In February 2024, a sophisticated attack on the Hong Kong office of the British engineering firm Arup resulted in the largest known instance of deepfake-enabled financial fraud. This instance shows that deepfake technology has developed from a theoretical threat to a useful instrument for large-scale financial theft, marking a turning point in cybercrime.
+
+The attack started when an email purporting to be from Arup's Chief Financial Officer in the UK was sent to a finance staff member. Although the email asked for private financial transactions, there were a few things about it that first made people suspicious. The employee was dubious of the request and doubted its legitimacy while adhering to established security procedures. 
+The attackers escalated their strategy to address these issues and get past the employee's resistance. The employee was invited to participate in what looked to be a video conference call with many top executives from the UK headquarters of the company. The CFO and a number of other identifiable coworkers were visible on the screen when the employee joined the video conversation.
+
+The employee was unaware that deepfake technology had been used to digitally create each participant in the video chat. With realistic movements, suitable facial expressions, and speech synthesis that matched each person's unique vocal qualities, the attackers had produced AI-generated video depictions of several senior executives.  With suitable surroundings and video quality typical of business discussions, the deepfaked CEOs appeared in what appeared to be a real corporate video conference.
+
+The artificial participants seemed to be engaged and responsive rather than just static video clips. They spoke with the employee, recognized their presence, and gave them instructions on how to make the desired financial transactions. The employee's initial assumptions were totally dispelled by the degree of sophistication. The employee authorized several bank transactions after being persuaded by what they saw and heard that they were in fact speaking with real top leadership. 
+
+The employee moved 200 million Hong Kong dollars, or around 25.6 million US dollars, to accounts under the attackers' control during the course of the scam. It wasn't until the legitimate executives were contacted via different methods and acknowledged they had never attended such a meeting or approved such payments that the fraud was detected.
+
+The pilfered money was swiftly transferred between different accounts and was never found. Although the attackers are still unknown and the technical specifics of how the deepfakes were produced are still unknown, security experts believe that sophisticated, commercially available deepfake tools were used in conjunction with extensive preparation, which included obtaining training data on the target executives. 
+
+\subsection{Impact on Organisations and Individuals}
+
+The corporation suffered rapid and serious repercussions as a result of the Arup disaster. Significant immediate harm was caused by the direct cash loss of \$25.6 million. But the event also put the company's reputation at greater danger, raised the possibility of legal repercussions, and necessitated thorough internal security assessments.
+
+Despite their first, understandable skepticism, the situation was profoundly upsetting for the individual involved. The attack took advantage of people's basic faith in sensory evidence, making it very difficult for anyone to have behaved differently in the given situation. This demonstrates one of the most pernicious features of deepfake attacks: even when targets adhere to security best practices and take the necessary precautions, they can still be successful.
+
+The incident rocked the business sector, causing many organizations to reconsider how they verify high-value transactions and senior leadership communications. It proved unequivocally that hearing and seeing someone during a video conference are no longer reliable indicators of who they are. 
+
+\section{Detection Challenges}
+
+\subsection{Human Difficulty in Detecting Deepfakes}
+
+Even among those with appropriate experience, research consistently shows that humans are very bad at identifying deepfakes. According to studies, the accuracy rates of untrained observers in identifying deepfakes are typically between 50 and 65 percent, which is just marginally better than chance. With accuracy rates rarely surpassing 75\%, even cybersecurity experts and people specially trained to spot deepfakes perform just slightly better.
+
+This subpar human performance is caused by a number of circumstances. First, rather than identifying minute alteration artifacts, human visual processing evolved to recognize faces and decipher facial expressions. Until there is compelling proof to the contrary, we are inclined to believe faces to be real. Second, real-world viewing conditions are frequently less than ideal, with limited screen sizes, network delay, and video compression all hiding obvious indicators of manipulation. Third, as deepfake technology advances, human-detectable artifacts and errors grow more subtle and uncommon.
+
+There are psychological aspects as well. Confirmation bias causes people to see what they anticipate seeing, especially when they get communications that seem to be from authoritative figures or recognized contacts. People are less likely to closely examine communications for indications of manipulation when they are under pressure to act right away. Critical judgment is further diminished by social engineering techniques that evoke authority, convey urgency, or elicit emotional reactions. 
+
+These difficulties are amply shown by the Arup example. At first, the concerned employee was dubious and doubted the legitimacy of the email request. However, those fears were dispelled when they were shown what seemed to be unambiguous visual and audible evidence in the form of a video conference with many identifiable CEOs. This illustrates how sensory evidence has a significant impact on human judgment. 
+
+\subsection{AI-Based Deepfake Detection and Its Limitations}
+
+Since humans are not very good at spotting deepfakes, a lot of research has gone into creating machine learning-based automatic detection techniques. Unnatural eye movements or blinking patterns, uneven lighting in various areas of the image, edge artifacts surrounding altered facial regions, temporal inconsistencies between successive frames, unnatural skin textures or color gradients, and physiological impossibilities like irregular pulse signals that can be extracted from minute color changes in facial video are just a few of the artifacts and inconsistencies that deepfakes may introduce. 
+
+While these AI-based detection systems can achieve high accuracy rates in controlled experimental conditions, their real-world effectiveness faces several significant limitations. Deepfake generation and detection engage in an ongoing arms race, with each improvement in detection technology spurring advances in generation methods that circumvent those detection approaches. Models trained to detect deepfakes from specific generation tools may fail to generalise to deepfakes created using different techniques or newer tools.
+
+Detection accuracy degrades substantially when applied to compressed video, low-resolution images, or content that has been processed through social media platforms. Many detection approaches require high-quality source material that may not be available in real-world scenarios. Adversarial attacks can be crafted specifically to fool detection systems by introducing perturbations that cause misclassification without noticeably affecting the visual appearance of the deepfake.
+
+Moreover, deployment of detection systems at scale presents practical challenges. Real-time detection of deepfakes in live video streams requires substantial computational resources that may not be practical for widespread deployment. False positive rates, even if relatively low in percentage terms, can result in large numbers of legitimate videos being incorrectly flagged as manipulated when applied to the massive volume of video content shared online daily.
+
+\subsection{Continuous Evolution of Deepfake Realism}
+
+The ongoing advancement of deepfake generation technologies is the primary obstacle to deepfake detection. Every new model generation yields results that are more realistic and have less observable artifacts. When compared to contemporary capabilities, what was considered state-of-the-art deepfake technology just two years ago is blatantly phony.
+
+Due of its speedy evolution, detection techniques soon become outdated. In just a few months, models that were trained to identify artifacts in existing deepfakes might be rendered ineffective against technologies of the future. The cycle of defensive technology research and development finds it difficult to keep up with offensive capabilities. 
+
+In addition, the difficulty of producing realistic deepfakes is still declining. It took a lot of technical know-how, a lot of computer power, and a lot of training data to create deepfakes in the early days. With only a few training photos and little user interaction, certain commercial applications can create convincing deepfakes thanks to modern techniques that have significantly streamlined the process. The threat is spreading more quickly due to the democratization of deepfake creation technologies. 
+
+\chapter{Voice Cloning Attacks}
+\section{Voice Cloning Technology}
+
+An artificial intelligence method called voice cloning makes it possible to accurately mimic a person's speech. Voice cloning systems can produce artificial speech that closely resembles the target person's tone, accent, pronunciation, and speaking style by using deep learning models trained on audio samples. Modern voice cloning creates extremely lifelike and emotionally expressive speech, in contrast to classic text-to-speech systems, making it challenging for human listeners to discern between artificial and real voices.
+
+The quick development of voice cloning technology has turned it from a theoretical idea into a useful instrument that can be abused for cybercrime. The growing availability of audio content on social media platforms, video-sharing websites, podcasts, and online meetings has made it easier to obtain voice samples. 
+
+\subsection{Working Principle of Voice Cloning}
+
+Deep neural networks that have been trained through supervised or transfer learning methods are commonly used in voice cloning systems. The first step in the process is to gather audio samples of the target speaker. Pitch, rhythm, timbre, accent, and speech patterns are among the distinctive vocal traits that are extracted from these recordings through analysis.
+
+Speaker embeddings are numerical representations created from the retrieved features. When paired with text input, these embeddings capture the speaker's identity and produce synthetic voice that mimics the target person speaking fresh content. Even a few seconds of audio data can be used by modern technologies to create realistic voice reproductions. 
+
+\subsection{Text-to-Speech AI Models}
+
+Neural text-to-speech models like neural vocoders and sequence-to-sequence architectures are used in sophisticated voice cloning systems. These algorithms use fine-grained audio waveform prediction to translate written text into speech that sounds natural. Neural vocoders produce expressive, fluid audio that closely mimics human speech, in contrast to previous systems that sounded robotic.
+
+Additionally, some systems use prosody modeling and emotion, which enables the generated voice to express authority, urgency, anguish, or tranquility. Because emotional cues have a huge impact on human decision-making, this skill greatly boosts the effectiveness of voice cloning attacks. 
+
+\subsection{Mimicking Accent, Tone, and Emotions}
+
+The capacity of contemporary voice cloning to mimic minute speech features is one of its riskiest features. These consist of speech cadence, pauses, emotional inflections, and regional accents. Even in high-stakes scenarios, attackers can effectively pose as trusted people thanks to this realism.
+
+Voice familiarity is a powerful sign of identity for human listeners. By creating audio that matches listeners' expectations, voice cloning takes advantage of this trust, rendering voice-only verification untrustworthy. 
+
+
+\section{Real-World Case Study: Voice Impersonation Fraud}
+
+\subsection{The UAE Executive Scam (2020)}
+
+A bank manager in the United Arab Emirates was the subject of one of the earliest known instances of AI-powered voice cloning used for financial fraud in 2020. Despite being several years old, this incident is nevertheless quite informative because it illustrates the basic strategies still used in voice cloning assaults.
+
+The attack started when thieves synthesized the voice of a director of a company that frequently transacted business with the targeted bank using AI voice cloning technology. The director's voice recordings were acquired by the attackers, possibly from public sources like conference speeches, interviews, or business promotional materials. They developed a voice clone that could replicate the director's vocal traits using this training data. 
+
+The attackers then called the bank manager, with the synthetic voice impersonating the director and requesting authorisation for transfers totalling 35 million US dollars to accounts supposedly belonging to a Hungarian acquisition target. To enhance the attack's credibility, the criminals orchestrated a series of follow-up calls to create a sense of ongoing communication and urgency around the transaction.
+
+The voice clone was sufficiently convincing that the bank manager, who had previous legitimate interactions with the actual director, accepted the calls as genuine. The manager processed the transfers as requested, believing they were following instructions from a legitimate client. The fraud was only discovered later when the actual director was contacted through separate channels and denied authorising any such transfers.
+
+By that time, the stolen 35 million dollars had been moved through multiple accounts and jurisdictions, making recovery extremely difficult. The funds were distributed across accounts in various countries, and despite international cooperation between law enforcement agencies, only a fraction of the stolen money was ever recovered.
+
+\subsection{Bypassing Voice-Based Authentication}
+
+Voice cloning poses a significant threat to voice-based authentication systems used in banking, customer service, and access control. Many such systems rely on comparing vocal features against stored voice samples. High-quality synthetic voices can replicate these features closely enough to bypass authentication in certain cases.
+
+Unlike passwords, voices cannot be easily changed once compromised. This creates a long-term security risk when voice samples are publicly available or leaked.
+
+\subsection{Impact on Organisations and Individuals}
+
+For organisations, voice cloning attacks can result in financial losses, data breaches, and reputational damage. Employees may experience stress and loss of confidence after being deceived, even when they follow standard procedures.
+
+Individuals, particularly elderly users, are increasingly targeted through vishing attacks where attackers impersonate family members or authority figures. Emotional manipulation combined with voice cloning makes these scams especially harmful.
+
+---
+
+\section{Current Threat Landscape}
+
+\subsection{Growth of Vishing and Voice-Based Fraud}
+
+Voice phishing, commonly termed vishing, has experienced explosive growth as voice cloning technology has become more accessible. Statistics from cybersecurity firms indicate that vishing attacks increased significantly in recent years, with some estimates suggesting growth rates exceeding 300 percent year-over-year in certain sectors.
+
+The combination of voice cloning with traditional social engineering tactics has proven particularly effective. Attackers often begin with text-based phishing to gather intelligence about targets, then follow up with voice-based attacks that leverage the gathered information to increase credibility. The voice component adds emotional weight and urgency that text-based communications often lack, making targets more likely to comply with requests.
+
+Common vishing scenarios include impersonation of executives requesting urgent wire transfers, impersonation of IT support requesting credentials or system access, impersonation of government officials demanding payment of fines or taxes, impersonation of family members claiming to be in emergency situations, and impersonation of financial institution representatives requesting account verification.
+
+The COVID-19 pandemic accelerated the growth of vishing attacks as more business was conducted remotely via phone and video calls rather than in-person meetings. This shift normalised voice-only interactions for transactions that might previously have required face-to-face verification, creating additional opportunities for voice-based fraud.
+
+\subsection{Targeting of Elderly Users and Corporate Employees}
+
+Elderly individuals are frequent targets due to limited awareness of AI-based threats and higher levels of trust in voice communication. Corporate employees, particularly those in finance or administrative roles, are targeted due to their access to sensitive systems and financial authority.
+
+\subsection{Limitations of Voice-Based Security Systems}
+
+The rise of voice cloning has exposed weaknesses in voice-based authentication systems. Variations in voice due to illness or stress require systems to be tolerant, creating opportunities for synthetic voices to succeed. As voice cloning technology continues to evolve, reliance on voice alone as an authentication factor is no longer sufficient.
+
+\chapter{AI-Powered Phishing}
+\section{AI Enhancement of Phishing}
+
+Phishing is a form of cybercrime in which attackers deceive users into revealing sensitive information such as login credentials, financial details, or personal data by impersonating trusted entities. Traditionally, phishing attacks relied on mass-distributed emails with generic content, hoping that a small percentage of recipients would fall victim. These attacks often contained poor grammar, spelling mistakes, and obvious inconsistencies that users could identify with basic awareness training.
+
+The integration of artificial intelligence has fundamentally changed phishing attack strategies. AI-powered phishing focuses on quality, personalisation, and scalability. By leveraging machine learning and natural language processing, attackers can now generate highly convincing phishing messages that closely resemble legitimate communications, making detection significantly more difficult.
+
+\subsection{Traditional Phishing vs AI-Generated Phishing}
+
+Traditional phishing attacks relied on mass distribution of relatively generic fraudulent messages hoping that a small percentage of recipients would fall victim. These attacks were characterised by several identifiable weaknesses including poor grammar and spelling errors, generic greetings like "Dear Customer" rather than personalised salutations, obvious mismatches between claimed sender and actual email address, crude urgency tactics such as "Your account will be closed within 24 hours", and lack of relevant contextual information about the recipient or their circumstances.
+
+These weaknesses served as warning signs that trained users could recognise, and automated spam filters could detect using pattern-matching and reputation-based techniques. Security awareness training focused heavily on teaching users to identify these telltale signs of phishing attempts.
+
+AI-generated phishing represents a fundamental shift in attack quality and personalisation. Large language models can generate flawless text in multiple languages with appropriate grammar, spelling, and style. They can incorporate detailed personal information about targets gathered from social media, data breaches, and other sources to create highly contextualised messages. AI systems can analyse corporate communication styles and replicate the tone, terminology, and format of legitimate internal communications.
+
+These capabilities eliminate many of the traditional warning signs that users were trained to recognise. An AI-generated phishing email can be virtually indistinguishable from legitimate correspondence in terms of language quality, appropriate use of context, and realistic communication style.
+
+
+\subsection{Use of Large Language Models for Email Generation}
+
+Large language models (LLMs) such as modern generative AI systems can produce human-like text that is coherent, persuasive, and contextually appropriate. Cybercriminals exploit these capabilities to automate the creation of phishing emails, instant messages, and even chatbot-driven conversations.
+
+Attackers typically begin by gathering information about targets using publicly available sources such as social media, professional networking platforms, and breached databases. This information is then used as input prompts for AI models to generate phishing messages tailored to specific individuals or organisations.
+
+These AI-generated messages can imitate the tone and style of corporate communication, making them difficult to distinguish from genuine emails. Additionally, attackers can rapidly generate multiple variations of the same message, allowing them to bypass spam filters that rely on pattern recognition.
+
+\subsection{Increased Success Rates Due to Personalisation}
+
+Research consistently demonstrates that personalised phishing attacks achieve substantially higher success rates than generic campaigns. Studies have shown that while generic phishing emails might achieve success rates of one to three percent, highly personalised spear-phishing can achieve success rates of 30 percent or higher against targeted individuals.
+
+AI amplifies this personalisation advantage by enabling attackers to generate customised messages at scale. Previously, creating highly personalised phishing emails required significant manual effort, limiting the number of targets that could be practically engaged. An attacker might spend hours researching a single high-value target to craft a convincing spear-phishing email.
+
+With AI assistance, attackers can now generate thousands of personalised phishing emails in the time it once took to create a handful. The system can automatically incorporate relevant details about each target, adjust tone and style appropriately, and generate contextually relevant pretexts for the phishing attempt.
+
+This combination of quality and scale fundamentally changes the economics of phishing attacks. Attackers no longer face a trade-off between volume and personalisation. They can simultaneously conduct mass campaigns while maintaining the high success rates typically associated with carefully crafted spear-phishing against individual targets.
+
+
+\section{Real-World Case Study: AI-Assisted Social Engineering}
+
+\subsection{The MGM Resorts Attack (September 2023)}
+
+The attack against MGM Resorts in September 2023 represents one of the most significant and disruptive AI-assisted social engineering incidents documented to date. While the attack combined multiple techniques, the phishing and social engineering components were crucial to its success and subsequent impact.
+
+The attack was conducted by a cybercriminal group known as Scattered Spider, comprised of relatively young individuals primarily based in Western countries who are native English speakers. This linguistic advantage, combined with AI-assisted intelligence gathering and communication generation, enabled highly convincing social engineering attacks.
+
+The attack began with reconnaissance using publicly available information. The attackers used LinkedIn and other professional networking sites to identify current MGM Resorts employees. They selected a target employee and used AI-enhanced tools to gather detailed information about that person's role, responsibilities, and likely system access.
+
+Armed with this intelligence, an attacker called MGM's IT help desk, impersonating the researched employee. The conversation, likely supported by AI-generated talking points and responses, lasted approximately ten minutes. During this call, the attacker convinced the help desk to provide credentials and access to MGM's internal systems.
+
+This initial access then enabled the deployment of ransomware across MGM's systems by the ALPHV/BlackCat ransomware group, who appear to have collaborated with Scattered Spider. The ransomware encrypted critical systems, causing massive operational disruption across MGM's properties.
+
+\subsection{Business Email Compromise and Ransomware}
+
+AI-powered phishing plays a critical role in Business Email Compromise (BEC) attacks. In such attacks, attackers impersonate executives or trusted partners to request urgent financial transfers or sensitive information.
+
+The MGM incident resulted in estimated financial losses of approximately 100 million US dollars, including lost revenue and recovery costs. This case illustrates how AI-assisted phishing can serve as the entry point for large-scale cyberattacks with severe economic and operational consequences.
+
+\subsection{Operational and Financial Impact}
+
+Beyond direct financial losses, AI-powered phishing attacks cause reputational damage, loss of customer trust, regulatory scrutiny, and long-term operational disruptions. Organisations may face legal consequences due to data breaches and failure to protect sensitive information.
+
+Employees involved in such incidents may also experience psychological stress and reduced confidence, highlighting the human cost of advanced social engineering attacks.
+
+---
+
+\section{Scale of the Problem}
+
+\subsection{Global Rise in AI-Driven Phishing Attacks}
+
+Statistical evidence demonstrates a dramatic increase in AI-enhanced phishing attacks across all sectors and regions. Cybersecurity firms report that AI-generated content appeared in over 70 percent of phishing emails analysed in 2024, representing a substantial increase from previous years. The sophistication and quality of phishing attempts have increased measurably, with traditional indicators such as grammar errors and generic content becoming increasingly rare.
+
+The frequency of attacks has also increased substantially. Many organisations report facing hundreds or thousands of phishing attempts daily, with the volume continuing to grow. This escalation is partly enabled by AI automation, which allows attackers to generate and distribute massive volumes of customised phishing content with minimal additional effort.
+
+Certain sectors face particularly acute threats. Financial institutions continue to be heavily targeted due to the direct potential for monetary theft. Healthcare organisations are targeted both for ransomware attacks and for valuable personal health information. Government agencies face attacks seeking access to sensitive information or systems. Educational institutions, often with less robust security and many users, face high volumes of phishing attempts.
+
+The economic impact of successful phishing attacks is substantial and growing. Direct financial losses from business email compromise scams alone exceeded billions of dollars globally in recent years. Indirect costs including incident response, system recovery, regulatory fines, legal expenses, and reputational damage often exceed direct theft by significant margins.
+
+\subsection{Availability of Phishing Tools on the Dark Web}
+
+A significant factor in the proliferation of AI-powered phishing is the commercialisation of attack tools and services on dark web marketplaces. Cybercrime has increasingly adopted a service-based business model, with specialised providers offering various components of the attack chain as purchasable services.
+
+Phishing-as-a-service platforms now commonly include AI-powered email generation, automated reconnaissance and intelligence gathering tools, pre-built phishing page templates that mimic legitimate services, email delivery infrastructure designed to evade spam filters, and even technical support and tutorials for less sophisticated criminals.
+
+One notable example is the InboxPrime AI platform, which features integrated AI-powered email generators that create complete phishing emails including subject lines matching legitimate business communication. Users configure parameters such as language, topic, industry, email length, and desired tone, and the system generates convincing phishing content automatically. The platform includes real-time spam diagnostic modules that analyse generated emails for common spam filter triggers and suggest corrections. Support for spintax creates variations of email messages to ensure no two phishing emails are identical, helping evade pattern-based detection.
+
+These platforms dramatically lower the barrier to entry for conducting sophisticated phishing campaigns. Individuals with minimal technical skills can now launch attacks that would have required significant expertise just a few years ago. The pricing models for these services are often subscription-based and surprisingly affordable, making them accessible to a wide range of potential attackers.
+
+The commercialisation of cybercrime tools creates a troubling dynamic where innovation in attack capabilities is driven by competitive market forces. Platform providers compete to offer more sophisticated features, better evasion capabilities, and higher success rates, accelerating the evolution of threats.
+
+
+\subsection{Polymorphic AI-Generated Phishing}
+
+A particularly concerning development is polymorphic phishing, where AI systems generate numerous variations of phishing messages. Each message differs slightly in wording, structure, and formatting, making signature-based detection ineffective.
+
+This evolution requires organisations to move beyond traditional security measures and adopt adaptive, behaviour-based detection techniques to combat AI-powered phishing effectively.
+
+\chapter{Defence Strategies Against AI-Powered Cyber Crimes}
+\section{Technical Detection and Prevention}
+
+As AI-powered cyber attacks continue to evolve, traditional security mechanisms are no longer sufficient to provide comprehensive protection. Defence against AI-driven threats requires a multi-layered approach that combines advanced technical controls with adaptive monitoring and response mechanisms. Technical detection and prevention form the first line of defence against deepfake attacks, voice cloning fraud, and AI-generated phishing.
+
+\subsection{Deepfake Detection Techniques}
+
+Deepfake detection techniques focus on identifying inconsistencies and artifacts introduced during the generation of synthetic media. These techniques operate at multiple levels. Visual analysis examines pixel-level inconsistencies, unnatural facial textures, irregular lighting patterns, and abnormal reflections in eyes or skin. Temporal analysis evaluates frame-to-frame continuity to detect unnatural transitions, flickering, or mismatched facial movements.
+
+More advanced approaches use machine learning models trained to distinguish between authentic and synthetic content. These models analyse facial landmarks, eye-blinking patterns, lip synchronisation, and physiological signals such as subtle skin colour changes associated with blood flow. While such systems can achieve high accuracy in controlled environments, their effectiveness decreases with low-resolution or compressed video commonly used in online communication.
+
+\subsection{Voice Verification Safeguards}
+
+To counter voice cloning attacks, organisations must strengthen voice verification mechanisms beyond simple voice matching. Multi-factor authentication combining voice recognition with other verification factors significantly improves security. Additional safeguards include challenge-response techniques where users are asked to repeat random phrases, detection of unnatural speech patterns, and analysis of acoustic inconsistencies that may indicate synthetic audio.
+
+Behavioural voice analysis can further enhance security by evaluating speech cadence, hesitation patterns, and contextual responses that are difficult for AI systems to replicate accurately. For high-risk scenarios, voice-based requests should always be verified using alternative communication channels.
+
+\subsection{Email and Network Security Solutions}
+
+Defending against AI-powered phishing requires intelligent email and network security solutions. Modern email security systems employ natural language processing to analyse message intent, tone, and contextual relevance rather than relying solely on keyword matching. These systems can identify suspicious requests, abnormal communication patterns, and deviations from normal organisational workflows.
+
+Network-level protections such as zero-trust architectures, network segmentation, and continuous monitoring reduce the impact of successful phishing attacks. Even if credentials are compromised, limiting access privileges and monitoring unusual activity can prevent attackers from moving laterally within the network.
+
+\section{Organisational Protection Measures}
+
+\subsection{Multi-Factor Authentication}
+
+Multi-factor authentication (MFA) is one of the most effective defences against credential-based attacks. MFA requires users to verify their identity using two or more independent factors such as passwords, mobile devices, biometric data, or hardware security keys. Even if attackers obtain login credentials through phishing or social engineering, MFA prevents unauthorised access.
+
+Organisations should enforce MFA for all critical systems, remote access points, email platforms, and administrative accounts. Strong MFA implementations significantly reduce the success rate of AI-driven phishing and impersonation attacks.
+
+\subsection{Verification and Callback Procedures}
+
+Verification procedures are essential to counter deepfake and voice cloning attacks. Organisations should implement strict callback and secondary verification protocols for sensitive requests, particularly those involving financial transactions or system access.
+
+Requests received via email or video calls should be verified through independent communication channels using known contact details. Callback verification helps ensure that requests are genuine and not generated by AI-based impersonation techniques.
+
+\subsection{Cybersecurity Awareness Training}
+
+Human awareness remains a critical component of cybersecurity defence. Organisations must update training programmes to reflect the realities of AI-powered cyber threats. Employees should be trained to recognise that visual and voice-based communication can be manipulated and that urgency should never override verification procedures.
+
+Regular training sessions, simulated phishing exercises, and clear incident reporting mechanisms help employees respond effectively to suspicious activity. A culture that encourages verification rather than blind trust significantly reduces organisational risk.
+
+\section{Individual Protection Measures}
+
+\subsection{Verification Before Acting on Urgent Requests}
+
+Individuals should exercise caution when responding to urgent or unexpected requests involving money, credentials, or sensitive information. Verifying the request through an independent channel before taking action is essential, even when the request appears to come from a trusted source.
+
+\subsection{Limiting Public Sharing of Voice and Video Data}
+
+Publicly shared audio and video content can be exploited for voice cloning and deepfake generation. Individuals should review privacy settings on social media platforms and limit the availability of high-quality voice and video recordings wherever possible.
+
+\subsection{Importance of Scepticism and Awareness}
+
+Maintaining informed scepticism is vital in defending against AI-powered cybercrime. Awareness of emerging threats, combined with cautious verification practices, enables individuals to protect themselves without compromising productivity or trust in legitimate communication.
+
+\chapter{Legal Framework and Future Trends}
+\section{Legal and Regulatory Aspects}
+
+The rapid rise of AI-powered cybercrime has raised serious legal and regulatory concerns across the globe. While most countries have established cybercrime laws addressing fraud, identity theft, and unauthorised system access, these frameworks were largely designed before the emergence of advanced artificial intelligence technologies. As a result, existing laws often struggle to address the unique challenges posed by AI-driven attacks.
+
+\subsection{Overview of Existing Cybercrime Laws}
+
+Traditional cybercrime legislation focuses on offences such as computer misuse, data theft, financial fraud, and impersonation. Laws such as information technology acts, electronic transaction regulations, and data protection frameworks provide a legal basis for prosecuting cybercriminal activities.
+
+In India, the Information Technology Act and related cyber laws address unauthorised access, identity theft, and electronic fraud. Similarly, international frameworks such as the Computer Fraud and Abuse Act in the United States and the General Data Protection Regulation in the European Union offer legal mechanisms to penalise cyber offences and protect personal data.
+
+Although these laws can be applied to AI-powered cybercrimes, they do not explicitly address technologies such as deepfakes, voice cloning, or generative AI misuse. This creates ambiguity in enforcement and interpretation, particularly when synthetic media is involved.
+
+\subsection{Challenges in Regulating AI Misuse}
+
+Regulating the misuse of artificial intelligence presents significant challenges due to the dual-use nature of AI technologies. The same tools that enable innovation in healthcare, education, and accessibility can also be exploited for criminal purposes. Imposing strict restrictions on AI development may hinder legitimate research and economic growth.
+
+Another challenge lies in attribution and jurisdiction. AI-powered attacks are often launched across international borders, making it difficult to identify perpetrators and determine legal jurisdiction. The anonymity provided by the internet, combined with AI-generated content, further complicates investigation and prosecution.
+
+Additionally, the rapid pace of AI development outstrips legislative processes. By the time laws are drafted and enacted, the technology may have evolved significantly, rendering regulations outdated.
+
+\subsection{Gaps in Current Legal Frameworks}
+
+Current legal frameworks lack specific provisions addressing synthetic media manipulation, real-time impersonation, and AI-generated deception. Victims of deepfake fraud or voice cloning scams may face difficulties in seeking legal remedies due to unclear liability and enforcement mechanisms.
+
+There is also limited accountability for developers and platforms hosting AI tools that can be misused. While some countries are exploring disclosure requirements and penalties for malicious deepfake creation, global consensus on AI regulation remains fragmented.
+
+\section{Future Threats}
+
+\subsection{Real-Time Deepfake Attacks}
+
+One of the most concerning future threats is the emergence of real-time deepfake technology. Unlike pre-recorded synthetic videos, real-time deepfakes can manipulate live video calls, allowing attackers to impersonate individuals during real-time interactions.
+
+Such capabilities would severely undermine the reliability of video conferencing as a verification mechanism. Real-time facial manipulation and voice synthesis could enable attackers to conduct extended conversations, negotiate transactions, and issue instructions without raising immediate suspicion.
+
+\subsection{AI-as-a-Service Cybercrime Platforms}
+
+The cybercrime ecosystem is increasingly adopting a service-based model. AI-as-a-service platforms available on dark web marketplaces provide tools for automated phishing, deepfake generation, voice cloning, and attack orchestration. These platforms lower the barrier to entry for cybercrime, enabling individuals with minimal technical skills to launch sophisticated attacks.
+
+Subscription-based models, user-friendly interfaces, and technical support offered by such platforms contribute to the rapid spread and commercialisation of AI-powered cybercrime.
+
+\subsection{Increasing Sophistication of AI Attacks}
+
+AI attack capabilities will continue to advance along multiple dimensions. Improved generation quality will make synthetic media progressively more difficult to distinguish from authentic content. Enhanced personalisation will enable attacks precisely tailored to individual targets based on comprehensive intelligence gathering. Adaptive capabilities will allow AI systems to respond dynamically to target reactions and modify attack strategies in real-time. Multi-modal attacks will combine text, voice, video, and other media in coordinated campaigns that exploit multiple trust signals simultaneously.
+
+Convergence of different AI capabilities will create particularly potent attack combinations. For example, deepfake video could be combined with voice cloning and AI-generated dialogue to create completely synthetic video calls where a target believes they are having an extended conversation with a known individual when in reality they are interacting entirely with AI systems.
+
+Defensive technologies will struggle to keep pace with these advancing threats. The fundamental asymmetry is that attackers need their techniques to succeed once against a target, while defenders must successfully detect and block all attacks. This asymmetry advantages attackers in the ongoing technological arms race.
+
+\chapter{Conclusion}
+\section{Summary of AI-Powered Cybercrime Threats}
+
+The rapid evolution of artificial intelligence has fundamentally transformed the cybercrime landscape. Unlike traditional cyber attacks that primarily targeted technical vulnerabilities, modern AI-powered cybercrimes exploit human trust, perception, and behavioural patterns. This seminar examined three major AI-driven threats: deepfake technology, voice cloning attacks, and AI-powered phishing.
+
+Deepfake technology has emerged as a powerful tool for visual impersonation, enabling attackers to create highly realistic synthetic videos that undermine the credibility of visual evidence. Voice cloning attacks have demonstrated the ability to convincingly replicate human speech using minimal audio samples, enabling fraud through phone-based impersonation. AI-powered phishing, driven by large language models, has eliminated traditional warning signs such as grammatical errors and generic messaging, significantly increasing the success rate of social engineering attacks.
+
+Real-world incidents discussed in this seminar clearly demonstrate the severity of these threats, with organisations suffering substantial financial losses, operational disruptions, and long-term reputational damage. These cases confirm that AI-powered cybercrime is no longer a future concern but a present and rapidly growing reality.
+
+\section{Limitations of Traditional Security Mechanisms}
+
+Traditional cybersecurity mechanisms are increasingly inadequate against AI-driven attacks. Security approaches based solely on passwords, voice authentication, visual verification, and static detection rules are vulnerable to sophisticated AI-generated deception. Human reliance on sensory verification, such as seeing or hearing a trusted individual, has become a critical weakness in the age of synthetic media.
+
+Furthermore, rule-based detection systems struggle to cope with polymorphic and adaptive attacks generated by artificial intelligence. As AI systems continue to learn and evolve, traditional defences face an ongoing arms race where attackers often gain the advantage through speed, scale, and automation.
+
+\section{Importance of Adaptive and Continuous Security}
+
+Defending against AI-powered cybercrime requires a shift towards adaptive, multi-layered security strategies. Technical measures such as AI-based detection systems, behavioural analysis, and multi-factor authentication must be combined with robust organisational policies and human awareness.
+
+Verification protocols, callback procedures, and zero-trust security models play a crucial role in reducing the effectiveness of impersonation attacks. Equally important is continuous cybersecurity awareness training that prepares users to recognise and respond appropriately to AI-enhanced social engineering attempts.
+
+\section{Need for Awareness, Verification, and Proactive Defence}
+
+Ultimately, human awareness remains one of the strongest defences against AI-powered cybercrime. Individuals and organisations must adopt a culture of scepticism, verification, and accountability. Urgent or unusual requests should always be independently verified, regardless of the apparent source.
+
+As artificial intelligence continues to advance, proactive defence strategies must evolve in parallel. Collaboration between policymakers, technology developers, organisations, and end users is essential to establish effective legal frameworks, ethical AI usage standards, and resilient security infrastructures.
+
+In conclusion, addressing AI-powered cybercrime requires not only technological innovation but also informed human judgment, continuous adaptation, and collective responsibility to preserve trust and security in digital ecosystems.
+
+%%%%%%%%%%%%%%%%%%%% BIBLIOGRAPHY %%%%%%%%%%%%%%%%%%%%
+\begin{thebibliography}{99}
+\bibitem{ref1} Syed, S. A. (2025). Adversarial AI and cybersecurity: defending against AI powered cyber threats. Iconic Research And Engineering Journals, 8(9), 1030 1041.  
+\bibitem{ref2} Y Issa, R., Ashraf, K., C Pereira, C., A Haddad, A., \& Singh, N. (2025). Unmasking Deception: Deepfake Technology and Emerging Cybercrime Trends–A Forensic Approach. Issa, Rim and Ashraf, Khadeeja and Ashraf, Khadeeja and C. Pereira, Cerusha and C. Pereira, Cerusha and A. Haddad, Ahmed and A. Haddad, Ahmed and Singh, Nrashant and Singh, Nrashant, Unmasking Deception: Deepfake Technology and Emerging Cybercrime Trends–A Forensic Approach (November 27, 2025). 
+\bibitem{ref3} Awotidebe, M. (2025). The Rise of Intelligent Threats: Exploring AI-Driven Cybercrime in the Digital Era.
+\bibitem{ref4}Bajwa, M. T. T., Tehreem, F., Farid, Z., Tahir, H. M. F., \& Khalid, A. (2025). Deepfake voice recognition: Techniques, organizational risks and ethical implications. Spectrum of Engineering Sciences, 106-121. 
+\end{thebibliography}
+
+\appendix
+\chapter{Presentation Slides}
+\vspace{1cm}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.7\linewidth]{1.png}
+    \label{fig:image3}
+    
+    \vspace{0.8cm}
+    
+    \centering
+    \includegraphics[width=0.7\linewidth]{2.png}
+    \label{fig:image4}
+    
+    \vspace{0.8cm}
+    
+    \centering
+    \includegraphics[width=0.7\linewidth]{3.png}
+    \caption{Seminar presentation slides (1-6)}
+    \label{fig:image5}
+\end{figure}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.7\linewidth]{4.png}
+    \label{fig:image3}
+    
+    \vspace{0.8cm}
+    
+    \centering
+    \includegraphics[width=0.7\linewidth]{5.png}
+    \label{fig:image4}
+    
+    \vspace{0.8cm}
+    
+    \centering
+    \includegraphics[width=0.7\linewidth]{6.png}
+    \label{fig:image5}
+
+    \vspace{0.8cm}
+
+    \centering
+    \includegraphics[width=0.7\linewidth]{12.png}
+    \caption{Seminar presentation slides (7-14)}
+    \label{fig:image3}
+\end{figure}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.7\linewidth]{8.png}
+    \label{fig:image3}
+    
+    \vspace{0.8cm}
+    
+    \centering
+    \includegraphics[width=0.7\linewidth]{9.png}
+    \label{fig:image4}
+    
+    \vspace{0.8cm}
+    
+    \centering
+    \includegraphics[width=0.7\linewidth]{10.png}
+    \label{fig:image5}
+
+    \vspace{0.8cm}
+
+    \centering
+    \includegraphics[width=0.7\linewidth]{11.png}
+    \caption{Seminar presentation slides (15-22)}
+    \label{fig:image3}
+\end{figure}
+
+\end{document}
