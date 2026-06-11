@@ -116,7 +116,6 @@ http://localhost:5000
 - [Project Report](../Project_report.pdf)
 - [Project Presentation](../Project_Presentation.pptx)
 
-
 ## Screenshots
 
 ### Login Page
