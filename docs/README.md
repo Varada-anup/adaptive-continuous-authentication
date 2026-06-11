@@ -113,8 +113,8 @@ http://localhost:5000
 ---
 ## 📄 Project Documents
 
-- [Project Report](main%20project.pdf)
-- [Project Presentation](Project_Presentation.pptx)
+- [Project_report](main%20project_report.pdf)
+- [Project_Presentation](Project_Presentation.pptx)
 
 
 ## Screenshots
