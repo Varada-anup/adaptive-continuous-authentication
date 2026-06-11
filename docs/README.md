@@ -117,17 +117,17 @@ http://localhost:5000
 
 ### Login Page
 
-![Login Page](screenshot/login.png)
+![Login Page](screenshots/login.png)
 
 ### Dashboard
 
-![Dashboard](screenshot/suspicious.png)
+![Dashboard](screenshots/suspicious.png)
 
 ### suspicious 
-![Dashboard](screenshot/interaction.png)
+![Dashboard](screenshots/interaction.png)
 ### Intruder Detection
 
-![Intruder Detection](screenshot/intruder.png)
+![Intruder Detection](screenshots/intruder.png)
 
 ## 👩‍💻 Author
 Varada Anup
