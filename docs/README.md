@@ -112,7 +112,7 @@ http://localhost:5000
 
 ---
 
-## 👩‍💻 Author
+
 ## Screenshots
 
 ### Login Page
@@ -129,6 +129,7 @@ http://localhost:5000
 
 ![Intruder Detection](screenshots/intruder.png)
 
+## 👩‍💻 Author
 Varada Anup
 MCA Student
 
