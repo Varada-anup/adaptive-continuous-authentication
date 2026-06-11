@@ -117,15 +117,17 @@ http://localhost:5000
 
 ### Login Page
 
-![Login Page](screenshots/login_page.png)
+![Login Page](screenshots/login.png)
 
 ### Dashboard
 
-![Dashboard](screenshots/interaction_area.png)
+![Dashboard](screenshots/suspicious.png)
 
+### suspicious 
+![Dashboard](screenshots/interaction.png)
 ### Intruder Detection
 
-![Intruder Detection](screenshots/intruder-detected.png)
+![Intruder Detection](screenshots/intruder.png)
 
 Varada Anup
 MCA Student
