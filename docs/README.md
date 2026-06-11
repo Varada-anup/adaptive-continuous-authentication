@@ -111,6 +111,10 @@ http://localhost:5000
 * Advanced anomaly detection models
 
 ---
+## 📄 Project Documents
+
+- [Project Report](main%20project.pdf)
+- [Project Presentation](Project_Presentation.pptx)
 
 
 ## Screenshots
