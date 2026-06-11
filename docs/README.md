@@ -113,6 +113,19 @@ http://localhost:5000
 ---
 
 ## 👩‍💻 Author
+## Screenshots
+
+### Login Page
+
+![Login Page](screenshots/login.png)
+
+### Dashboard
+
+![Dashboard](screenshots/interaction_area.png)
+
+### Intruder Detection
+
+![Intruder Detection](screenshots/intruder-detected.png)
 
 Varada Anup
 MCA Student
