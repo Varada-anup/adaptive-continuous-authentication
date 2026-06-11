@@ -116,18 +116,16 @@ http://localhost:5000
 ## Screenshots
 
 ### Login Page
-
-![Login Page](screenshots/login.png)
+![Login Page](../screenshots/login.png)
 
 ### Dashboard
+![Dashboard](../screenshots/suspicious.png)
+### suspicious
+![Interaction Area](../screenshots/interaction.png)
 
-![Dashboard](screenshots/suspicious.png)
-
-### suspicious 
-![Dashboard](screenshots/interaction.png)
 ### Intruder Detection
+![Intruder Detection](../screenshots/intruder.png)
 
-![Intruder Detection](screenshots/intruder.png)
 
 ## 👩‍💻 Author
 Varada Anup
