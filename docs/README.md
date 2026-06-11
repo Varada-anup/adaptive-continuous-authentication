@@ -117,7 +117,7 @@ http://localhost:5000
 
 ### Login Page
 
-![Login Page](screenshots/login.png)
+![Login Page](screenshots/login-page.png)
 
 ### Dashboard
 
